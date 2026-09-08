@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cafe_bg"
+    tools:context=".activity_manage_product_details">
+
+
+    <!-- Back Button pinned top-left -->
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/BackBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow"
+        app:tint="@color/brownDark" />
+
+    <!-- ScrollView wrapping all content below back button -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/imageButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/detailProductNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ProductName"
+                android:textColor="@color/brownDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <!-- Product Image Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/productImageCardView"
+                android:layout_width="0dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/brownDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailProductNameTextView">
+
+                <ImageView
+                    android:id="@+id/detailProductImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/EditProductIMAGE"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Price below Image -->
+            <TextView
+                android:id="@+id/detailProductPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/ProductPrice"
+                android:textColor="@color/brownDark"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/productImageCardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Divider line under price -->
+            <View
+                android:id="@+id/dividerUnderPrice"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/brownDark"
+                app:layout_constraintTop_toBottomOf="@id/detailProductPriceTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Short Description Title -->
+            <TextView
+                android:id="@+id/shortDescriptionTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ManagingProductOptionsADDShortDescription"
+                android:textColor="@color/brownDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dividerUnderPrice"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <!-- Short Description Content -->
+            <TextView
+                android:id="@+id/shortDescriptionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/ManagingProductOptionsADDShortDescription"
+                android:textColor="@color/brownDark"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp"
+                app:layout_constraintStart_toStartOf="@id/shortDescriptionTitleTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shortDescriptionTitleTextView"
+                style="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <!-- Full Description Title -->
+            <TextView
+                android:id="@+id/fullDescriptionTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/ManagingProductOptionsADDFullDescription"
+                android:textColor="@color/brownDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/shortDescriptionTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/shortDescriptionTextView"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <!-- Full Description Content -->
+            <TextView
+                android:id="@+id/fullDescriptionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/ManagingProductOptionsADDFullDescription"
+                android:textColor="@color/brownDark"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp"
+                app:layout_constraintStart_toStartOf="@id/fullDescriptionTitleTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fullDescriptionTitleTextView"
+                style="@style/TextAppearance.MaterialComponents.Body2" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

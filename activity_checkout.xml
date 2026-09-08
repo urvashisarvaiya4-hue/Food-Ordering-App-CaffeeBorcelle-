@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cafe_bg"
+    android:padding="16dp"
+    tools:context=".activity_checkout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/checkoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Checkout"
+            android:fontFamily="@font/calistoga"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/brownDark"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Full Name (Read-only) -->
+        <TextView
+            android:id="@+id/fullNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CheckoutFullName"
+            android:fontFamily="@font/song_myung"
+            android:textColor="@color/brownDark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@drawable/shape_edittext"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email (Read-only) -->
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CheckoutEmail"
+            android:fontFamily="@font/song_myung"
+            android:textColor="@color/brownDark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@drawable/shape_edittext"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Contact Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CheckoutContactNumber">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:inputType="phone"
+                android:textStyle="bold"
+                android:textColor="@color/brownDark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CheckoutAddress"
+            android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:fontFamily="@font/song_myung"
+                android:lines="3"
+                android:textStyle="bold"
+                android:textColor="@color/brownDark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- City -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CheckoutCity"
+            android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textColor="@color/brownDark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- State -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CheckoutState"
+            android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:textColor="@color/brownDark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Pincode -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CheckoutPincode"
+            android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pincodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:textColor="@color/brownDark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Payment Method -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CheckoutPaymentMethod"
+            android:textSize="18sp"
+            android:fontFamily="@font/calistoga"
+            android:textStyle="bold"
+            android:textColor="@color/brownDark"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/paymentRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/codRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:text="@string/CheckoutCashOnDelivery"
+                android:textColor="@color/brownDark"/>
+
+            <RadioButton
+                android:id="@+id/upiRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:text="@string/CheckoutUPIWallet"
+                android:textColor="@color/brownDark"/>
+
+            <RadioButton
+                android:id="@+id/cardRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/song_myung"
+                android:text="@string/CheckoutCreditDebitCard"
+                android:textColor="@color/brownDark"/>
+        </RadioGroup>
+
+        <!-- Place Order Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/placeOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CheckoutPlaceOrder"
+            android:fontFamily="@font/button"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="20dp"
+            app:backgroundTint="@color/brownDark"
+            android:textColor="@color/white"
+            android:elevation="8dp"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+tools:context=".order_success">
+
+
+    <!-- ✅ Modern Gradient Background (same drawable use) -->
+    <!-- ✅ Subtle Glow Layer (no text/image/button change; just decorative) -->
+
+    <!-- ✅ Main Card (modern: bigger radius + soft shadow) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/successCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="1dp"
+        app:strokeColor="#12000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="20dp">
+
+            <!-- ✅ Top “pill” accent (same as before, just positioned modern way) -->
+            <View
+                android:id="@+id/topPill"
+                android:layout_width="84dp"
+                android:layout_height="7dp"
+                android:background="@drawable/success_top_pill"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- ✅ Circle Avatar holder + image (image id/src unchanged) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/avatarCard"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginTop="18dp"
+                app:cardCornerRadius="74dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="#14000000"
+                app:layout_constraintTop_toBottomOf="@id/topPill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/successImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="24dp"
+                    android:src="@drawable/order_approve"
+                    app:tint="@color/brownDark" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ✅ Success message (id/text unchanged) -->
+            <TextView
+                android:id="@+id/successMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/successMessage"
+                android:fontFamily="@font/song_myung"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/avatarCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- ✅ Payment row (same id/text, more modern “row” look) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/paymentCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D4AF37"
+                app:layout_constraintTop_toBottomOf="@id/successMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/paymentIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/payment_icon"
+                        app:tint="@android:color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/paymentText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/paymentText"
+                        android:fontFamily="@font/calistoga"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@id/paymentIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ✅ Total row (same id/text) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/totalCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="2dp"
+                app:strokeColor="#D4AF37"
+                app:layout_constraintTop_toBottomOf="@id/paymentCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/totalIcon"
+                        android:layout_width="31dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_total"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/totalText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/totalText"
+                        android:fontFamily="@font/calistoga"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@id/totalIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ✅ OK Button (id/text unchanged; still uses your drawable) -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/okButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="14dp"
+                android:text="OK"
+                android:textSize="20sp"
+                android:fontFamily="@font/button"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_success_ok"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                app:layout_constraintTop_toBottomOf="@id/totalCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
