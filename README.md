@@ -23,3 +23,29 @@ Coffee Borcelle is a food ordering app designed to provide users with a convenie
 ## Project Purpose
 
 This project was developed to practice Android application development and demonstrate practical skills in building a food ordering application.
+
+## App Screenshots
+
+### Screen 1
+![Screen 1](pic1.png.jpeg)
+
+### Screen 2
+![Screen 2](pic2.png.jpeg)
+
+### Screen 3
+![Screen 3](pic3.png.jpeg)
+
+### Screen 4
+![Screen 4](pic4.png.jpeg)
+
+### Screen 5
+![Screen 5](pic5.png.jpeg)
+
+### Screen 6
+![Screen 6](pic6.png.jpeg)
+
+### Screen 7
+![Screen 7](pic7.png.jpeg)
+
+### Screen 8
+![Screen 8](pic8.png.jpeg)
