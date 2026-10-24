@@ -1,18 +1,36 @@
-Coffee Borcelle ☕
-Coffee Borcelle is an Android-based food ordering application developed using Kotlin and Firebase.
+# ☕ Coffee Borcelle – Food Ordering Android App
 
-About the Project
-Coffee Borcelle is a food ordering app designed to provide users with a convenient way to explore food items and place orders.
+Coffee Borcelle is an Android food ordering application developed using Kotlin and Firebase.
 
-Features
-Food menu and item browsing
-Food ordering
-User interface for customers
-Admin interface for managing orders
-Tech Stack
-Kotlin
-Android Studio
-XML Layouts
-Firebase
-Project Purpose
-This project was developed to practice Android application development and demonstrate practical skills in building a food ordering application.
+## 📱 About the Project
+
+Coffee Borcelle allows users to browse food items and place orders through an Android application. It also includes admin-side functionality for managing products and orders.
+
+## ✨ Features
+
+- Food menu and item browsing
+- Food ordering and checkout
+- User registration and login
+- Product and category management
+- Admin dashboard and order management
+- Firebase integration
+
+## 🛠️ Tech Stack
+
+- **Language:** Kotlin
+- **IDE:** Android Studio
+- **UI:** XML Layouts
+- **Backend:** Firebase
+- **Build System:** Gradle
+
+## 📸 Screenshots
+
+App screenshots will be added here.
+
+## 🎯 Project Objective
+
+This project was developed to practice Android application development and build practical skills in Kotlin, UI design, Firebase integration, and application workflows.
+
+## 👩‍💻 Developer
+
+Urvashi Sarvaiya
