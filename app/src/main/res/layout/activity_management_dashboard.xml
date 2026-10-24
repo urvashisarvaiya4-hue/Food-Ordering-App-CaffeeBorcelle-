@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cafe_light"
+    android:padding="16dp"
+    android:scrollbars="none"
+    tools:context=".admin.activity_management_dashboard">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".admin.Management_Dashboard">
+
+        <TextView
+            android:id="@+id/AppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/brownDark"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/calistoga"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Summary Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ProductStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/cafe_bg"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/AppName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="12dp"
+                android:gravity="center"
+                android:weightSum="3"
+                android:background="@color/cafe_bg">
+
+                <!-- Status Item Template -->
+                <LinearLayout
+                    android:id="@+id/PendingStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/pending_orders"
+                        app:tint="@color/brownDark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardPending"
+                        android:fontFamily="@font/song_myung"
+                        android:textStyle="bold"
+                        android:textColor="@color/brownDark"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvPendingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardPendingCount"
+                        android:textColor="@color/brownDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CompletedStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/check_circle"
+                        app:tint="@color/brownDark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardCompleted"
+                        android:fontFamily="@font/song_myung"
+                        android:textStyle="bold"
+                        android:textColor="@color/brownDark"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp" />
+
+                    <TextView
+                        android:id="@+id/Delivered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardDelivered"
+                        android:textColor="@color/brownDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/TotalEarnings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/earnings"
+                        app:tint="@color/brownDark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardEarnings"
+                        android:fontFamily="@font/song_myung"
+                        android:textStyle="bold"
+                        android:textColor="@color/brownDark"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/TotalEarningsAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ManagementDashboardTotalEarningsAmount"
+                        android:textColor="@color/brownDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Cards -->
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/ProductManagementADD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/ProductStatus"
+            app:cardIcon="@drawable/inventory"
+            app:cardText="Add Item" />
+
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/ProductManagementALL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ProductManagementADD"
+            app:cardIcon="@drawable/all_item"
+            app:cardText="All Item" />
+
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/ProductManagementDelivered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ProductManagementALL"
+            app:cardIcon="@drawable/delivery_truck"
+            app:cardText="Delivered" />
+
+        <!-- User Info last se 3rd -->
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/UserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ProductManagementDelivered"
+            app:cardIcon="@drawable/manage_account"
+            app:cardText="User Info" />
+
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/AdminManagementADD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/UserInfo"
+            app:cardIcon="@drawable/accountcircle"
+            app:cardText="Add Admin" />
+
+        <include
+            layout="@layout/activity_management_dashboard_blueprint"
+            android:id="@+id/AdminManagementSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/AdminManagementADD"
+            app:cardIcon="@drawable/logout"
+            app:cardText="Log Out" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

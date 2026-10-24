@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:forceDarkAllowed="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CaffeeBorcelle">
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RewardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".wishlist_items_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".product_search"
+            android:exported="false" />
+        <activity
+            android:name=".order_success"
+            android:exported="false" />
+        <activity
+            android:name=".order_product_status_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".order_item_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".management_user_info_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".management_product_all_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".management_dashboard_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".item_category"
+            android:exported="false" />
+        <activity
+            android:name=".dialog_forgetpassword"
+            android:exported="false" />
+        <activity
+            android:name=".detail_item_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".delivered_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".cart_items_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".bestseller_items_blueprint"
+            android:exported="false" />
+        <activity
+            android:name=".activity_user_management"
+            android:exported="false" />
+        <activity
+            android:name=".activity_screen2"
+            android:exported="false" />
+        <activity
+            android:name=".activity_screen1"
+            android:exported="false" />
+        <activity
+            android:name=".activity_registration_page"
+            android:exported="false" />
+        <activity
+            android:name=".activity_order_product_status"
+            android:exported="false" />
+        <activity
+            android:name=".activity_managing_product_options_all"
+            android:exported="false" />
+        <activity
+            android:name=".activity_managing_product_options_add"
+            android:exported="false" />
+        <activity
+            android:name=".activity_management_login"
+            android:exported="true" />
+        <activity
+            android:name=".admin.activity_management_dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".activity_management_admin_add"
+            android:exported="false" />
+        <activity
+            android:name=".ItemDetails"
+            android:exported="true" />
+        <activity
+            android:name=".activity_manage_product_details"
+            android:exported="true" />
+        <activity
+            android:name=".activity_login_page"
+            android:exported="true" />
+        <activity
+            android:name=".activity_home_page"
+            android:exported="true" />
+        <activity
+            android:name=".activity_edit_profile"
+            android:exported="true" />
+        <activity
+            android:name=".activity_edit_product"
+            android:exported="true" />
+        <activity
+            android:name=".activity_delivered"
+            android:exported="true" />
+        <activity
+            android:name=".activity_checkout"
+            android:exported="true" />
+        <activity
+            android:name=".activity_admin_user_detail"
+            android:exported="true" />
+        <activity
+            android:name=".activity_admin_orders_screen"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

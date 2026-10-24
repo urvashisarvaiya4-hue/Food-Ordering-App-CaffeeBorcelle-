@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:background="@color/cafe_light"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    tools:context=".activity_management_admin_add">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:paddingTop="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvAddAdminTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AddAdminTitle"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/brownDark"
+            android:fontFamily="@font/bigshot_one"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvAddAdminSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AddAdminTitle1"
+            android:textSize="15sp"
+            android:lineSpacingExtra="2dp"
+            android:fontFamily="@font/bigshot_one"
+            android:textColor="@color/brownDark"
+            android:alpha="0.8"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Card Container -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:strokeWidth="0.8dp"
+            app:strokeColor="@color/brownDark"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/cafe_bg"
+                android:padding="24dp">
+
+                <!-- Username -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ManagementUserName"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="20dp"
+                    app:startIconTint="@color/brownDark"
+                    app:boxStrokeColor="@color/brownDark"
+                    app:boxStrokeWidth="1dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAdminUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/song_myung"
+                        android:textColor="@color/brownDark"
+                        android:textSize="15sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ManagementPassword"
+                    app:endIconMode="password_toggle"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    app:startIconTint="@color/brownDark"
+                    app:endIconTint="@color/brownDark"
+                    app:boxStrokeColor="@color/brownDark"
+                    app:boxStrokeWidth="1dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAdminPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/song_myung"
+                        android:textColor="@color/brownDark"
+                        android:textSize="15sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Add Admin Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AddAdmin"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:fontFamily="@font/button"
+            app:cornerRadius="24dp"
+            android:padding="14dp"
+            android:textColor="@android:color/white"
+            android:elevation="10dp"
+            android:backgroundTint="@color/brownDark"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

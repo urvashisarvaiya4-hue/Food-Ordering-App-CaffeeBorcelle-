@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">CaffeeBorcelle</string>
+
+
+    <!-- Registration -->
+    <string name="Registration">SignUp</string>
+    <string name="RegistrationText1">Sign Up Here</string>
+    <string name="RegistrationUserName">Name</string>
+    <string name="RegistrationEmail">Email</string>
+    <string name="RegistrationPassword">Password</string>
+    <string name="RegistrationFacebook">Facebook</string>
+    <string name="RegistrationGoogle">Google</string>
+    <string name="RegistrationText2">Sign Up With</string>
+    <string name="RegistrationToLogin">Already have an account? Login</string>
+
+    <!-- LogIn -->
+    <string name="Login">Login</string>
+    <string name="LoginText1">Sign In Here</string>
+    <string name="LoginEmail">Email</string>
+    <string name="LoginPassword">Password</string>
+    <string name="LoginFacebook">Facebook</string>
+    <string name="LoginGoogle">Google</string>
+    <string name="LoginText2">Sign Up With</string>
+    <string name="LoginToRegistration">New user? Register here</string>
+    <string name="Admin">Admin</string>
+
+    <!-- HomePage -->
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_wishlist">Wishlist</string>
+    <string name="title_Search">Search</string>
+    <string name="title_home">Home</string>
+    <string name="title_Cart">Cart</string>
+    <string name="title_UserAccount">Account</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Home Fragment -->
+    <string name="HomeFrag">FreshFood</string>
+
+    <string name="AddToCart">Add to Cart</string>
+    <!-- Cart Fragment -->
+    <string name="CartFragEmpty1">Empty Cart</string>
+    <string name="CartFragEmpty2">Your cart is empty!</string>
+    <string name="CartFragEmpty3">Add food you want to buy and they appear here.</string>
+    <string name="CartFragEmpty4">Start Ordering</string>
+    <string name="CartFrag">PROCEED</string>
+    <string name="DecreaseQuantity">Decrease Quantity</string>
+    <string name="Quantity">1</string>
+    <string name="IncreaseQuantity">Increase Quantity</string>
+    <!-- Checkout -->
+    <string name="Checkout">Checkout</string>
+    <string name="CheckoutFullName">Full Name</string>
+    <string name="CheckoutEmail">Email</string>
+    <string name="CheckoutContactNumber">Contact Number</string>
+    <string name="CheckoutAddress">Address</string>
+    <string name="CheckoutCity">City</string>
+    <string name="CheckoutState">State</string>
+    <string name="CheckoutPincode">Pincode</string>
+    <string name="CheckoutPaymentMethod">Payment Method</string>
+    <string name="CheckoutCashOnDelivery">Cash on Delivery</string>
+    <string name="CheckoutUPIWallet">UPI / Wallet</string>
+    <string name="CheckoutCreditDebitCard">Credit/Debit Card</string>
+    <string name="CheckoutPlaceOrder">Place Order</string>
+    <string name="successMessage">Order Placed Successfully!</string>
+    <string name="paymentText">Payment: Online</string>
+    <string name="totalText">Total: ₹0.00</string>
+
+
+    <!-- Search Fragment -->
+    <string name="SearchFrag1">Find Your Food</string>
+    <string name="SearchFrag2">Search from our wide range of items</string>
+    <string name="SearchFragEmpty1">No results</string>
+    <string name="SearchFragEmpty2">Oops! No food item found.</string>
+    <string name="SearchFragEmpty3">Try searching with a different keyword.</string>
+    <string name="AddBTN">Add</string>
+
+    <!-- User Account Fragment -->
+    <string name="UserName">Example Name</string>
+    <string name="UserEmailAddress">example@email.com</string>
+    <string name="UserAccountFrag3">12</string>
+    <string name="UserAccountFrag4">Orders</string>
+    <string name="UserAccountFrag5">5</string>
+    <string name="UserAccountFrag6">Wishlist</string>
+    <string name="UserAccountFrag7">Edit Profile</string>
+    <string name="UserAccountFrag8">Logout</string>
+    <!-- Edit Profile -->
+    <string name="imgProfile">Profile picture</string>
+    <string name="ChangePhoto">Photo</string>
+    <string name="CanNotChangeEmail">Can Not Change Email</string>
+    <string name="btnChangePassword">Change Password</string>
+
+    <!-- Wishlist Fragment -->
+    <string name="Wishlist">Wishlist</string>
+    <string name="WishlistFragEmpty1">No food items</string>
+    <string name="WishlistFragEmpty2">Your wishlist is empty!</string>
+    <string name="WishlistFragEmpty3">Add food item you love and see them here.</string>
+    <string name="WishlistFragEmpty4">Browse food item</string>
+
+    <!-- Change Password -->
+    <string name="CurrentPassword">Current Password</string>
+    <string name="NewPassword">New Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="UpdatePassword">Update Password</string>
+
+    <!-- Order Status -->
+    <string name="OrderStatus">Order Status</string>
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- // // // // // // // // // // // /PRODUCT STRING\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+    <!-- Managing Product Options ALL Blue Print -->
+    <string name="DiscountPercent">-70%</string>
+    <string name="ProductName">Example Product Name</string>
+    <string name="ProductReviews">180 Reviews</string>
+    <string name="ProductPrice">₹29,990</string>
+    <string name="OriginalPrice">₹45,995</string>
+    <string name="EditButton">Edit</string>
+    <string name="DeleteButton">Delete</string>
+    <string name="BackBTN">Back Button</string>
+
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- // // // // // // // /ADMIN STRING\ \\ \\ \\ \\ \\ \\ \\ -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+    <!-- Delivered -->
+    <string name="Delivered">Delivered</string>
+
+    <!-- Management Login -->
+    <string name="ManagementLogin">Admin Login</string>
+    <string name="ManagementUserName">UserName</string>
+    <string name="ManagementPassword">Password</string>
+    <string name="ManagementLoginBTN">Login</string>
+
+    <!-- Management Dashboard -->
+    <string name="ManagementDashboardPending">Pending</string>
+    <string name="ManagementDashboardPendingCount">XX</string>
+    <string name="ManagementDashboardCompleted">Completed</string>
+    <string name="ManagementDashboardDelivered">XX</string>
+    <string name="ManagementDashboardEarnings">Earnings</string>
+    <string name="ManagementDashboardTotalEarningsAmount">XXXX</string>
+
+    <!-- Managing Product Options ADD -->
+    <string name="ManagingProductOptionsADDImageURL">Image URL</string>
+    <string name="ManagingProductOptionsADDNewProduct">Add New food item</string>
+    <string name="ManagingProductOptionsADDProductImagePreview">food image preview</string>
+    <string name="ManagingProductOptionsADDProductName">food Name</string>
+    <string name="ManagingProductOptionsADDRating">Rating (e.g. 4.5)</string>
+    <string name="ManagingProductOptionsADDReviews">Reviews</string>
+    <string name="ManagingProductOptionsADDShortDescription">Short Description</string>
+    <string name="ManagingProductOptionsADDFullDescription">Full Description</string>
+    <string name="ManagingProductOptionsADDKeyFeatures">Key Features</string>
+    <string name="ManagingProductOptionsADDDiscount">Discount (e.g. 10%)</string>
+    <string name="ManagingProductOptionsADDPrice">Price</string>
+    <string name="ManagingProductOptionsADDOriginalPrice">Original Price</string>
+    <string name="ManagingProductOptionsADDSaveProduct">Save food item</string>
+
+    <!-- Managing Product Options ALL -->
+    <string name="ManagingProductOptionsALLBack">Back</string>
+    <string name="ManagingProductOptionsALLItems">All Food Items</string>
+    <!-- Managing Product Edit -->
+    <string name="EditProduct">Edit food Item</string>
+    <string name="EditProductIMAGE">food Item Image</string>
+    <string name="EditProductChooseImage">Choose Image</string>
+    <string name="BasicInformation">BASIC INFORMATION</string>
+    <string name="Pricing">PRICING</string>
+    <string name="Descriptions">DESCRIPTIONS</string>
+    <string name="Cancel">Cancel</string>
+    <string name="SaveBtn">Save Changes</string>
+
+
+    <!-- Admin Orders Activity -->
+    <!-- Order Item Blue Print -->
+    <string name="AdminOrders">Admin Orders</string>
+    <string name="AdminOrdersEmpty">No Orders Found</string>
+    <string name="OrderId">Order #101</string>
+    <string name="ProductNameWithQuantity">food Item Name (x2)</string>
+    <string name="Date">01/01/2000</string>
+    <string name="SelectStatus">Select Status</string>
+    <string name="SaveStatus">Save Status</string>
+
+    <!-- Admin Add  -->
+    <string name="AddAdmin">Add Admin</string>
+    <string name="AddAdminTitle">Add New Admin</string>
+    <string name="AddAdminTitle1">Create admin credentials to grant dashboard access.</string>
+
+
+    <!-- Order Status Options -->
+    <string-array name="order_status_options">
+        <item>Pending</item>
+        <item>Dispatched</item>
+        <item>Delivered</item>
+    </string-array>
+</resources>

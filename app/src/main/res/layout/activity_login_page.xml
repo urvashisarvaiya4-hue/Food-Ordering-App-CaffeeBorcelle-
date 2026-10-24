@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/coffee_light_cream"
+    android:layout_height="match_parent"
+    tools:context=".activity_login_page">
+
+    <!-- Top Decorative Curve -->
+    <View
+        android:id="@+id/topCurve"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/top_curve"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!-- TOP LOGO -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="197dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:fontFamily="serif"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#4E342E"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- CARD VIEW -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/titleLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:background="@drawable/glow_edittext"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:paddingStart="14dp"
+                android:textColor="#4E342E"
+                android:textColorHint="#795548"/>
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/glow_edittext"
+                android:drawableStart="@drawable/ic_pass"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:paddingStart="14dp"
+                android:inputType="textPassword"
+                android:textColor="#4E342E"
+                android:textColorHint="#795548"/>
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="serif"
+                android:layout_marginTop="22dp"
+                android:text="Login"
+                android:clickable="true"
+                android:backgroundTint="@null"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/cafe_btn"
+                />
+
+            <!-- Create Account -->
+            <TextView
+                android:id="@+id/txtCreate"
+                android:layout_width="wrap_content"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:text="Create New Account"
+                android:textSize="14sp"
+                android:layout_marginTop="18dp"
+                android:textColor="#5D4037"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

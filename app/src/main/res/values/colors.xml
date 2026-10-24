@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="brownDark">#4E342E</color>     <!-- deep brown -->
+    <color name="brownMedium">#6D4C41</color>  <!-- medium brown -->
+    <color name="brownLight">#8D6E63</color>   <!-- light brown -->
+    <color name="coffee_light_cream">#F5E3D4</color>
+    <color name="coffee_brown">#8B5E3C</color>
+    <color name="coffee_dark_brown">#3E2723</color>
+    <color name="coffee_soft_cream">#F7EEDD</color>
+    <color name="coffee_warm_cream">#F9E7D7</color>
+    <color name="cafe_bg">#F4E3D4</color>
+    <color name="orange">#FFA500</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="cafe_dark">#5A3E2B</color>
+    <color name="cafe_light">#D7BFA5</color>
+    <color name="cafe_card">#FFFFFF</color>
+    <color name="cafe_button_start">#7B4A2C</color>
+    <color name="cafe_button_end">#5A3E2B</color>
+    <!-- Browns -->
+    <color name="brown_500">#A52A2A</color>
+    <color name="brown_700">#8B0000</color>
+    <color name="brown_400">#B5651D</color>
+    <color name="brown_200">#D2B48C</color>
+
+    <!-- Backgrounds -->
+    <color name="cream_50">#FFF8E1</color>
+    <color name="dark_gray">#121212</color>
+
+    <!-- Text -->
+
+    <color name="white">#FFFFFFFF</color>
+</resources>

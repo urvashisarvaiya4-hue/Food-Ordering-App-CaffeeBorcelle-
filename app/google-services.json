@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095118305805",
+    "project_id": "caffeeborcelle",
+    "storage_bucket": "caffeeborcelle.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095118305805:android:29fb7e2aa28e3a50e4f344",
+        "android_client_info": {
+          "package_name": "com.example.caffeeborcelle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-1n2mz6yN1aF1EVHe6b1QFHNiWRS0FSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

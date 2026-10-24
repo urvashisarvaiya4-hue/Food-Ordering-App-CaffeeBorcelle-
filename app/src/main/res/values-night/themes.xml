@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CaffeeBorcelle" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/brown_200</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/brown_400</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Background & surface -->
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorSurface">@color/dark_gray</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/BrownButton</item>
+
+    </style>
+
+    <!-- Dark mode button style -->
+    <style name="BrownButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/brown_400</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

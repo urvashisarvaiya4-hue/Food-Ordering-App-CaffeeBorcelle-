@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="DashboardCardView">
+        <attr name="cardText" format="string" />
+        <attr name="cardIcon" format="reference" />
+    </declare-styleable>
+</resources>

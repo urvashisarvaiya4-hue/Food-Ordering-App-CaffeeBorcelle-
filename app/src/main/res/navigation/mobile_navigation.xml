@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.example.caffeeborcelle.fragment_wishlist"
+        android:label="@string/title_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <fragment
+        android:id="@+id/navigation_Search"
+        android:name="com.example.caffeeborcelle.fragment_search"
+        android:label="@string/title_Search"
+        tools:layout="@layout/fragment_search" />
+
+    <!-- ✅ HOME FRAGMENT -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.caffeeborcelle.fragment_home"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <!-- 🔥 ACTION MUST BE HERE -->
+        <action
+            android:id="@+id/action_homeFragment_to_categoryProductsFragment"
+            app:destination="@id/categoryProductsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_Cart"
+        android:name="com.example.caffeeborcelle.fragment_cart"
+        android:label="@string/title_Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/navigation_UserAccount"
+        android:name="com.example.caffeeborcelle.fragment_user_account"
+        android:label="@string/title_UserAccount"
+        tools:layout="@layout/fragment_user_account"/>
+
+    <!-- ✅ CATEGORY PRODUCTS -->
+    <fragment
+        android:id="@+id/categoryProductsFragment"
+        android:name="com.example.caffeeborcelle.ui.CategoryProductsFragment"
+        android:label="" />
+
+
+</navigation>

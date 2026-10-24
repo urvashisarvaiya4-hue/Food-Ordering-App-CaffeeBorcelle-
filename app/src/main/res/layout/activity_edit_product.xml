@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cafe_bg"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_edit_product">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/EditProduct"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/brownDark"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Product Image Preview -->
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_edittext"
+            android:clipToOutline="true"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/EditProductImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/broken_image"
+                android:contentDescription="@string/EditProductIMAGE" />
+        </FrameLayout>
+
+        <!-- ✅ New: Choose Image Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChooseImage"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:text="@string/EditProductChooseImage"
+            android:textColor="@color/brownDark"
+            android:background="@color/brownDark"
+            android:backgroundTint="@color/brownDark"/>
+
+        <!-- Image URL -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ManagingProductOptionsADDImageURL"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="@color/brownDark"
+            app:boxStrokeColor="@color/brownDark"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:textColor="@color/brownDark"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Section: Basic Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/BasicInformation"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/brownDark"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Product Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ManagingProductOptionsADDProductName"
+            android:textColorHint="@color/brownDark"
+            app:boxStrokeColor="@color/brownDark"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textColor="@color/brownDark"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Rating + Reviews -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <RatingBar
+                android:id="@+id/EditRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="0" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:hint="@string/ManagingProductOptionsADDReviews"
+                android:textColorHint="@color/brownDark"
+                app:boxStrokeColor="@color/brownDark"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/brownDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/brownDark"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Section: Pricing -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Pricing"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/brownDark"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Discount -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ManagingProductOptionsADDDiscount"
+            android:textColorHint="@color/brownDark"
+            app:boxStrokeColor="@color/brownDark"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/brownDark"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Price -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ManagingProductOptionsADDPrice"
+            android:textColorHint="@color/brownDark"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/brownDark"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/brownDark"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Original Price -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ManagingProductOptionsADDOriginalPrice"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/brownDark"
+            app:boxStrokeColor="@color/brownDark"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditOriginalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/brownDark"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Section: Descriptions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Descriptions"
+            android:textAllCaps="true"
+            android:letterSpacing="0.05"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/brownDark"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="4dp" />
+
+
+        <!-- Full Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ManagingProductOptionsADDFullDescription"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/brownDark"
+            app:boxStrokeColor="@color/brownDark"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/brownDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditFullDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:textColor="@color/brownDark"
+                android:minLines="5"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="28dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/CancelBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_edittext"
+                app:backgroundTint="@color/brownDark"
+
+                android:text="@string/Cancel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/SaveBtn"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                app:backgroundTint="@color/brownDark"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="@string/SaveBtn" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
